@@ -7,6 +7,7 @@ restaurantes = [{'nome':'Praça', 'categoria':'Japonesa', 'ativo':False},
 
 def exibir_nome_do_programa():
     print('🆂🅰🅱🅾🆁 🅴🆇🅿🆁🅴🆂🆂\n')
+print('oi')
 
 def exibir_opcoes():
     print('1. Cadastrar restaurante')
