@@ -1,5 +1,7 @@
 import os
 
+restaurantes = [{'Pizza', 'sushi'}]
+
 restaurantes = [{'nome':'Praça', 'categoria':'Japonesa', 'ativo':False}, 
                 {'nome':'Pizza Suprema', 'categoria':'Intaliana', 'ativo':True},
                 {'nome':'Cantina', 'categoria':'Intaliano', 'ativo':False}]
@@ -52,6 +54,24 @@ def listar_restaurantes():
 
     voltar_ao_menu_principal()
 
+def alternar_estado_restaurante():
+    exibir_subtitulo('Alternando estado do restaurante')
+    nome_restaurante = input('Digite o nome restaurante que deseja alternar o estado: ')
+    restaurante_encontrado = False
+
+    for restaurante in restaurantes:
+        if nome_restaurante == restaurante['nome']:
+            restaurante_encontrado = True
+            restaurante['ativo'] = not restaurante['ativo']
+            mensagem = f'o restaurante {nome_restaurante} foi ativado com sucesso' \
+            if restaurante['ativo'] else f'O restaurante {nome_restaurante} foi destivado com sucesso'
+            print(mensagem)
+    if not restaurante_encontrado:
+        print('O restaurante não foi encontrado')
+
+    voltar_ao_menu_principal()
+
+
 def escolher_opcoes():
     try:
         op = int(input('Escolha uma opção: '))
@@ -63,7 +83,7 @@ def escolher_opcoes():
         elif op == 2:
             listar_restaurantes()
         elif op == 3:
-            print('Ativar restaurantes')
+            alternar_estado_restaurante()
         elif op == 4:
             finalizar_app() 
         else:
