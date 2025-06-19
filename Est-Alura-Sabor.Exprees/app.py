@@ -28,6 +28,9 @@ def opcao_invalida():
     print('Opção invalida!\n')
     voltar_ao_menu_principal()
 
+
+
+
 def exibir_subtitulo(texto):
     os.system('clear')
     linha = '*' * (len(texto))
@@ -37,6 +40,7 @@ def exibir_subtitulo(texto):
     print()
 
 def cadastrar_novo_restaurante():
+    '''Essa função e responsavel por cadastrar um novo restaurante'''
     exibir_subtitulo('Cadastro de novos restaurantes')
     nome_do_restaurante = input('Digite o nome do restaurante que deseja cadastrar: ')
     categoria = input(f'Digite o nome da categoria do restaurante {nome_do_restaurante} já cadastrado: ')
