@@ -9,6 +9,7 @@ restaurantes = [{'nome':'Praça', 'categoria':'Japonesa', 'ativo':False},
 
 def exibir_nome_do_programa():
     print('🆂🅰🅱🅾🆁 🅴🆇🅿🆁🅴🆂🆂\n')
+    '''Essa função foi definida como o nome principal do nosso app'''
 
 
 def exibir_opcoes():
